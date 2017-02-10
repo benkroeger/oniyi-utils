@@ -2,7 +2,7 @@
 
 import path from 'path';
 import test from 'ava';
-import resolve from '../lib/module-loaders.js';
+import { resolve } from '..';
 
 test('fails if "name" is empty', (t) => {
   const fn = () => { resolve({}); };
