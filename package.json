@@ -17,10 +17,11 @@
   ],
   "repository": "benkroeger/oniyi-utils",
   "scripts": {
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov",
+    "coverage": "nyc npm test && nyc report --reporter=html",
+    "format": "prettier-eslint --write \"lib/**/*.js\" \"test/**/*.js\"",
+    "prelint": "npm run format",
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "preversion": "npm run coverage",
     "test": "ava --verbose",
     "test:watch": "npm test -- --watch"
   },
@@ -31,15 +32,16 @@
     "lib/"
   ],
   "devDependencies": {
-    "ava": "0.18.1",
-    "eslint": "3.15.0",
-    "eslint-config-oniyi": "4.4.0",
-    "eslint-plugin-ava": "4.1.0",
-    "nyc": "10.1.2"
+    "ava": "^0.23.0",
+    "eslint": "^4.10.0",
+    "eslint-config-oniyi": "^5.0.2",
+    "eslint-plugin-ava": "^4.2.2",
+    "nyc": "^11.3.0",
+    "prettier-eslint-cli": "^4.4.0"
   },
   "dependencies": {
-    "lodash": "4.17.4",
-    "oniyi-logger": "1.0.0"
+    "debug": "^3.1.0",
+    "lodash.union": "^4.6.0"
   },
   "nyc": {
     "exclude": [
