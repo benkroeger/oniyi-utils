@@ -4,18 +4,17 @@
   "description": "Collection of utils for the `oniyi` ecosystem",
   "license": "MIT",
   "private": false,
-  "author": {
-    "name": "Benjamin Kroeger",
-    "email": "benjamin.kroeger@gmail.com",
-    "url": "http://benjamin-kroeger.de"
-  },
+  "author": "Benjamin Kroeger <benjamin.kroeger@gmail.com> (http://benjamin-kroeger.de)",
   "main": "lib/index.js",
   "keywords": [
     "oniyi",
     "utils",
     "tools"
   ],
-  "repository": "benkroeger/oniyi-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benkroeger/oniyi-utils.git"
+  },
   "scripts": {
     "coverage": "nyc npm test && nyc report --reporter=html",
     "format": "prettier-eslint --write \"lib/**/*.js\" \"test/**/*.js\"",
@@ -48,5 +47,12 @@
       "node_modules/**",
       "test/**"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/benkroeger/oniyi-utils/issues"
+  },
+  "homepage": "https://github.com/benkroeger/oniyi-utils#readme",
+  "directories": {
+    "test": "test"
   }
 }
